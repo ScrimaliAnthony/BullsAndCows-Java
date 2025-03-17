@@ -8,6 +8,7 @@ class Game {
     private char[] secretCode;
     private int bulls = 0;
     private int cows = 0;
+    private int turn = 1;
 
     Game(Scanner sc) {
         secretCode = generateSecretCode(lengthOfSecretCode(sc));
@@ -52,20 +53,37 @@ class Game {
         }
     }
 
+    String toDisplaySecretCode() {
+        String toDisplaySecretCode = new String(secretCode);
+        return toDisplaySecretCode;
+    }
+
     int getBulls() {
         return bulls;
+    }
+
+    void resetBulls() {
+        bulls = 0;
     }
 
     int getCows() {
         return cows;
     }
 
+    void resetCows() {
+        cows = 0;
+    }
+
     char[] getSecretCode() {
         return secretCode;
     }
 
-    String toDisplaySecretCode() {
-        String toDisplaySecretCode = new String(secretCode);
-        return toDisplaySecretCode;
+    int getTurn() {
+        return turn;
     }
+
+    void setTurn() {
+        turn++;
+    }
+
 }

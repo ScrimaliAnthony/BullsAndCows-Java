@@ -19,4 +19,20 @@ class Display {
         game.toDisplaySecretCode();
         return "The random secret number is " + game.toDisplaySecretCode();
     }
+
+    static String lengthOfSecretCode() {
+        return "Please, enter the secret code's length:";
+    }
+
+    static String gameStart() {
+        return "Okay, let's start a game!";
+    }
+
+    static String turnNb(Game game) {
+        return "Turn" + game.getTurn();
+    }
+
+    static String congratulation() {
+        return "Congratulations! You guessed the secret code.";
+    }
 }
