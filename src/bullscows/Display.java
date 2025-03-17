@@ -14,4 +14,9 @@ class Display {
             return "Grade: None. The secret code is " + secretCode + ".";
         }
     }
+
+    static String secretNumber(Game game) {
+        game.toDisplaySecretCode();
+        return "The random secret number is " + game.toDisplaySecretCode();
+    }
 }
