@@ -20,23 +20,38 @@ class Game {
 
     private void lengthOfSecretCode(Scanner sc) {
         System.out.println(Display.lengthOfSecretCode());
+
+        if (!sc.hasNextInt()) {
+            throw new IllegalArgumentException("Error: the input is not a valid number.");
+        }
+
         int askLengthOfSecretCode = sc.nextInt();
         sc.nextLine();
 
-        if(lengthOfSecretCode > 36) {
+        if(askLengthOfSecretCode > 36) {
             throw new IllegalArgumentException("Error: can't generate a secret number with a length of " + lengthOfSecretCode + " because there aren't enough unique digits.");
-        } else {
-            lengthOfSecretCode = askLengthOfSecretCode;
         }
+        if(askLengthOfSecretCode <= 0) {
+            throw new IllegalArgumentException("Error: the length of the secret code must be greater than 0.");
+        }
+        lengthOfSecretCode = askLengthOfSecretCode;
     }
 
     private void numberOfPossibleSymbols(Scanner sc) {
         System.out.println(Display.numberOfPossibleSymbols());
+
+        if (!sc.hasNextInt()) {
+            throw new IllegalArgumentException("Error: the input is not a valid number.");
+        }
+
         int askNumberOfPossibleSymbols = sc.nextInt();
         sc.nextLine();
 
-        if(numberOfPossibleSymbols > lengthOfSecretCode) {
-            throw new IllegalArgumentException("Error: can't have more symbols than length of secret number cause symbols are unique");
+        if(askNumberOfPossibleSymbols < lengthOfSecretCode) {
+            throw new IllegalArgumentException("Error: it's not possible to generate a code with a length of " + lengthOfSecretCode + " with " + askNumberOfPossibleSymbols + " unique symbols.");
+        }
+        if(askNumberOfPossibleSymbols > 36) {
+            throw new IllegalArgumentException("Error: maximum number of possible symbols in the code is 36 (0-9, a-z).");
         }
         numberOfPossibleSymbols = askNumberOfPossibleSymbols;
     }
