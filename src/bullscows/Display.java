@@ -35,4 +35,15 @@ class Display {
     static String congratulation() {
         return "Congratulations! You guessed the secret code.";
     }
+
+    static String numberOfPossibleSymbols() {
+        return "Input the number of possible symbols in the code:";
+    }
+
+    static String secretIsPrepared(Game game) {
+        StringBuilder builder = new StringBuilder("The secret is prepared: ");
+        builder.append("*".repeat(game.getLengthOfSecretCode())).append(" ").append(game.getSymbolsRange());
+
+        return builder.toString();
+    }
 }

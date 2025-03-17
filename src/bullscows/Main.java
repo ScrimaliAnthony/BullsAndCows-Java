@@ -7,9 +7,6 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Game game;
 
-
-        System.out.println(Display.lengthOfSecretCode());
-
         try {
             game = new Game(sc);
         } catch (IllegalArgumentException e) {
@@ -18,6 +15,7 @@ public class Main {
             return;
         }
 
+        System.out.println(Display.secretIsPrepared(game));
         System.out.println(Display.gameStart());
 
         Player player = new Player();
