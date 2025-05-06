@@ -1,3 +1,6 @@
 test/ 
 build/
 out/
+.idea/
+*.iml
+*.swp
