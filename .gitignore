@@ -4,3 +4,5 @@ out/
 .idea/
 *.iml
 *.swp
+manifest.txt
+*.jar

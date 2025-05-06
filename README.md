@@ -1,4 +1,10 @@
-# 🧠 Bulls and Cows – Java Edition
+<div align="right">
+    <img src="https://img.shields.io/github/v/release/ScrimaliAnthony/BullsAndCows-java" />
+    <img src="https://img.shields.io/github/stars/ScrimaliAnthony/BullsAndCows-java?style=social" />
+    <img src="https://visitor-badge.laobi.icu/badge?page_id=ScrimaliAnthony.BullsAndCows-java" />
+</div>
+
+<img src="./banner.png"/>
 
 ## Présentation
 
@@ -17,6 +23,8 @@ Préparez votre esprit de déduction, testez vos hypothèses, et trouvez le code
 ---
 
 ## 📦 Télécharger et jouer
+
+⭐ Pensez à mettre une étoile au projet si vous l'appréciez !
 
 **➡️ [Télécharger le .jar](https://github.com/ScrimaliAnthony/bullsandcows-java/releases/latest)**
 
